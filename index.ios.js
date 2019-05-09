@@ -1,15 +1,35 @@
 import React from 'react';
-import { Text, AppRegistry } from 'react-native';
+import { Text, AppRegistry, View } from 'react-native';
 
 const Estilos = {
-    estiloTexto: {
-        fontSize: 50
+    principal: {
+        flex: 1,
+        backgroundColor: 'cornflowerblue'
+    },
+    topo: {
+        flex: 1,
+        backgroundColor: 'brown'
+    },
+    conteudo: {
+        flex: 8,
+        backgroundColor: 'yellowgreen'
+    },
+    rodape: {
+        flex: 1,
+        backgroundColor: 'orangered'
     }
 };
 
 const App = () => {
+
+    const { principal, topo, conteudo, rodape } = Estilos;
+
     return (
-        <Text style={ Estilos.estiloTexto }>Frases do Dia</Text>
+        <View style={ principal }>
+            <Text style={ topo }>Topo</Text>
+            <Text style={ conteudo }>Conteudo</Text>
+            <Text style={ rodape }>Rodape</Text>
+        </View>
     );
 };
 
